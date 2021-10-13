@@ -1,0 +1,7 @@
+{
+  "name": "UPZ",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
