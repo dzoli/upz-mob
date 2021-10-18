@@ -1,0 +1,42 @@
+<ion-card>
+    <ion-card-content>
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <!-- <ion-item *ngIf="!numCtrl.valid && numCtrl.touched" lines="none">
+                    <ion-label>Broj uzorka nije validan</ion-label>
+                </ion-item> -->
+            <ion-list lines="full" class="ion-no-margin">
+                <ion-item>
+                    <ion-label>Broj uzorka:</ion-label>
+                    <ion-input
+                        type="text"
+                        ngModel
+                        placeholder="Unesite broj uzorka..."
+                        name="number"
+                        required
+                        #numCtrl="ngModel"
+                    ></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Tip zemljišta:</ion-label>
+                    <ion-input type="text" placeholder="Unesite tip zemljišta..." ngModel name="type"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Dubina:</ion-label>
+                    <ion-input type="text" placeholder="Unesite dubinu..." ngModel name="depth"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label>Napomena:</ion-label>
+                    <ion-input type="text" placeholder="Unesite napomenu..." ngModel name="comment"></ion-input>
+                </ion-item>
+            </ion-list>
+        </form>
+    </ion-card-content>
+    <!-- <ion-button [disabled]="!f.valid" (click)="onLogin()" expand="block" class="ion-padding">Sa</ion-button> -->
+    <ion-button (click)="onSaveClicked()" expand="block" class="ion-margin" [disabled]="!f.valid" size="small">
+        <ion-icon slot="start" name="save-outline"></ion-icon>
+        Sačuvaj
+    </ion-button>
+</ion-card>

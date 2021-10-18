@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar><h1>Prijava</h1></ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <ion-list>
+            <ion-item>
+                <ion-label position="floating">Korisničko ime</ion-label>
+                <ion-input type="email" ngModel name="username" required email #emailCtrl="ngModel"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!emailCtrl.valid && emailCtrl.touched" lines="none">
+                <ion-label>Korisničko ime nije validno</ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Lozinka</ion-label>
+                <ion-input type="password" ngModel name="password" required #passCtrl="ngModel"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="!passCtrl.valid && passCtrl.touched" lines="none">
+                <ion-label>Lozinka ime nije validna</ion-label>
+            </ion-item>
+        </ion-list>
+    </form>
+    <ion-button [disabled]="!f.valid" type="submit" (click)="onLogin()" expand="block" class="ion-padding">Prijava</ion-button>
+</ion-content>

@@ -1,0 +1,21 @@
+// ion-item {
+//     background-color: rgba($color: #d3d3e215, $alpha: 0.5);
+//     border-radius: 10px;
+//     --padding-start: 10px;
+// }
+
+ion-textarea {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#webcamContainer {
+    display: flex;
+    background: #383838;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    // inexplicable/unknown extra space is rendered, causing scrollbars to show up
+    overflow: hidden;
+}

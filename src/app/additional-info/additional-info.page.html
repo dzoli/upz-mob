@@ -1,0 +1,65 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button color="primary"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Dodatne informacije</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <ion-list class="ion-padding">
+            <ion-item>
+                <ion-label position="floating">Poljoprivredna proizvodnja je uspostavljena na: </ion-label>
+                <ion-input type="text" ngModel name="productionType" #prodTypeCtrl="ngModel"></ion-input>
+            </ion-item>
+            <!-- <ion-item *ngIf="!emailCtrl.valid && emailCtrl.touched" lines="none">
+                <ion-label>Korisničko ime nije validno</ion-label>
+            </ion-item> -->
+            <ion-item>
+                <ion-label position="floating">Sistem za navodnjavanje:</ion-label>
+                <ion-input type="text" ngModel name="irrigationType" #irrigationCtrl="ngModel"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Protivgradna zaštita:</ion-label>
+                <ion-input type="text" ngModel name="hailProtection" #hailProtectionCtrl="ngModel"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Na parceli postoji objekat:</ion-label>
+                <ion-input type="text" ngModel name="agriculturalFacility" #agriculturalFacilityCtrl="ngModel"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Na parceli su vidljivi tragovi paljenja:</ion-label>
+                <ion-input type="text" ngModel name="burnTrace" #burnTraceCtrl="ngModel"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Prevlaživanje:</ion-label>
+                <ion-input type="text" ngModel name="humidity" #humidityCtrl="ngModel"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Erozija:</ion-label>
+                <ion-input type="text" ngModel name="erosionType" #erosionCtrl="ngModel"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Intezitet erozije: </ion-label>
+                <ion-input type="text" ngModel name="erosionIntensityType" #erosionIntensityCtrl="ngModel"></ion-input>
+            </ion-item>
+
+            <ion-item>
+                <ion-label position="floating">Zakorovljenost: </ion-label>
+                <ion-input type="text" ngModel name="weeds" #weedsCtrl="ngModel"></ion-input>
+            </ion-item>
+        </ion-list>
+    </form>
+    <ion-button (click)="onSaveClicked()" expand="block" class="ion-margin" [disabled]="!f.valid">
+        <ion-icon slot="start" name="save-outline"></ion-icon>
+        Sačuvaj
+    </ion-button>
+</ion-content>

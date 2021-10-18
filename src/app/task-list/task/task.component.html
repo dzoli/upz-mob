@@ -1,0 +1,70 @@
+<ion-card>
+    <ion-row>
+        <ion-col size="11">
+            <ion-row>
+                <ion-col size="4" class="ion-padding-start"> <ion-text color="medium">Datum zahteva: </ion-text> </ion-col>
+                <ion-col size="7">
+                    <ion-label size="large">{{ task.requestDate | date }}</ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="4" class="ion-padding-start"> <ion-text color="medium">KO: </ion-text> </ion-col>
+                <ion-col size="7">
+                    <ion-label>{{ task.ko }}</ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="4" class="ion-padding-start"> <ion-text color="medium">Opština: </ion-text> </ion-col>
+                <ion-col size="7">
+                    <ion-label>{{ task.municipality }}</ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="4" class="ion-padding-start"> <ion-text color="medium">Broj parcele: </ion-text> </ion-col>
+                <ion-col size="7">
+                    <ion-label>{{ task.parcelNumber }}</ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="4" class="ion-padding-start"> <ion-text color="medium">Podnosilac: </ion-text> </ion-col>
+                <ion-col size="7">
+                    <ion-label>{{ task.submitter }}</ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="4" class="ion-padding-start"> <ion-text color="medium">Telefon: </ion-text> </ion-col>
+                <ion-col size="7">
+                    <ion-label>{{ task.tel }}</ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="4" class="ion-padding-start"> <ion-text color="medium">Predkultura: </ion-text> </ion-col>
+                <ion-col size="7">
+                    <ion-label>{{ task.predCulture }}</ion-label>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col size="4" class="ion-padding-start"> <ion-text color="medium">Kultura: </ion-text> </ion-col>
+                <ion-col size="7">
+                    <ion-label>{{ task.culture }}</ion-label>
+                </ion-col>
+            </ion-row>
+        </ion-col>
+        <ion-col size="1">
+            <ion-fab horizontal="end">
+                <ion-fab-button (click)="onClick('map')" outline color="primary" size="small">
+                    <ion-icon name="location-sharp"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-button (click)="onClick('map')" outline color="primary" size="small">
+                    <ion-icon name="eyedrop-outline"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-button (click)="onClick('photo-album')" outline color="primary" size="small">
+                    <ion-icon name="camera-outline"></ion-icon>
+                </ion-fab-button>
+                <ion-fab-button (click)="onClick('additional-info')" outline color="primary" size="small">
+                    <ion-icon name="book-outline"></ion-icon>
+                </ion-fab-button>
+            </ion-fab>
+        </ion-col>
+    </ion-row>
+</ion-card>
